@@ -5,6 +5,9 @@ MAINTAINER Jungle Ran <jungle.r@intergreat.com>
 # Modify default apache docroot.
 RUN sed -i "s/\/var\/www\/html/\/var\/www\/html\/web/g" /etc/apache2/sites-available/000-default.conf
 
+# Install git.
+RUN apt-get update; apt-get install git -y
+
 # Extensions: uploadprogress, bcmath, mcrypt.
 RUN git clone https://github.com/Jan-E/uploadprogress.git /tmp/php-uploadprogress \
     && cd /tmp/php-uploadprogress \
