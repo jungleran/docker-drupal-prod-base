@@ -1,4 +1,4 @@
-FROM jungleran/drupal-base:8.5.4-apache
+FROM jungleran/drupal-base:8.5.5-apache
 
 RUN echo "memory_limit = -1" >  /usr/local/etc/php/conf.d/custom.ini \
     && echo "error_log = /var/www/html/logs/php_error.log" >> /usr/local/etc/php/conf.d/custom.ini \
